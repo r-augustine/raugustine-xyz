@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap');
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/SourceCodePro.ttf");
+}
 
 body {
     background: #111119;
