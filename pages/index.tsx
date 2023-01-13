@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from "next/link"
 import { Source_Code_Pro } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 
@@ -17,13 +15,13 @@ export default function Home() {
       <main className={source_code_pro.className}>
         <section className={styles.container}>
           <div className={styles.content}>
-              <h1 className={styles.title}>Hi I'm <span>Ricardo</span>, a FullStack Developer</h1>
+              <h1 className={styles.title}>Hi I&rsquo;m <span>Ricardo</span>, a FullStack Developer</h1>
               <h4 className={styles.subTitle}>My new portfolio website is coming soon</h4>
 
               <div className={styles.buttons}>
-                <a href="" className={styles.button}>Download my resume</a>
-                <a href="https://github.com/r-augustine" target="_blank" className={styles.button}>github</a>
-                <a href="https://www.linkedin.com/in/r-augustine/" target="_blank" className={styles.button}>linkedin</a>
+                <a href="/augustine.ricardo.pdf" download className={styles.button}>Download my resume</a>
+                <a href="https://github.com/r-augustine" rel="noreferrer" target="_blank" className={styles.button}>GitHub</a>
+                <a href="https://www.linkedin.com/in/r-augustine/" rel="noreferrer" target="_blank" className={styles.button}>LinkedIn</a>
               </div>
           </div>
         </section>
