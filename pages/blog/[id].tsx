@@ -14,16 +14,6 @@ interface CodeBlockProps {
   value: ReactNode;
 }
 
-// const CodeBlock = ({ language, value }: CodeBlockProps) => {
-//   return (
-//     <div className="code-block">
-//       <SyntaxHighlighter language={language} style={vscDarkPlus}>
-//         {value}
-//       </SyntaxHighlighter>
-//     </div>
-//   );
-// };
-
 interface PostProps {
   post: Post;
 }
