@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {`
           html {
             font-family: ${source_code_pro.style.fontFamily};
+            scroll-behavior: smooth;
           }
         `}
       </style>

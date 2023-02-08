@@ -1,22 +1,8 @@
-.container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  max-width: 60ch;
-}
-
 .title {
   font-size: 3rem;
   font-weight: lighter;
   margin-bottom: 0.6em;
+  text-align: center;
 }
 
 .title span {
@@ -27,11 +13,13 @@
 .subTitle {
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 1.2em;
+  margin-bottom: 2em;
+  text-align: center;
 }
 
 .buttons {
   display: flex;
+  justify-content: space-around;
   gap: 1.5em;
 }
 

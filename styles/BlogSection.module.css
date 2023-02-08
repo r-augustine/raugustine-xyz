@@ -1,0 +1,62 @@
+.section {
+  padding: 10em 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.header h2::before,
+.header h2::after {
+  font-weight: lighter;
+  font-size: 1.2rem;
+  display: inline-block;
+  position: absolute;
+}
+
+.header h2::before {
+  content: "<h2>";
+  left: -3.3rem;
+}
+
+.header h2::after {
+  content: "</h2>";
+  right: -4rem;
+  bottom: 0;
+}
+
+.posts {
+  border: 1px solid var(--primary-color);
+}
+
+.post {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: large;
+  transition: all 100ms ease-in;
+}
+
+.post:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+}
+
+.post:not(:last-of-type) {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.post span:first-of-type {
+  display: block
+}
+
+.subTitle {
+  font-size: 1rem;
+}
