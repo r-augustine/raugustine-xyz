@@ -1,62 +1,8 @@
-.blogHeader {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10rem;
-}
-
-.blogHeader h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  position: relative;
-}
-
-.blogHeader h2::before,
-.blogHeader h2::after {
-  font-weight: lighter;
-  font-size: 1.2rem;
-  display: inline-block;
-  position: absolute;
-}
-
-.blogHeader h2::before {
-  content: "<h2>";
-  left: -3.3rem;
-}
-
-.blogHeader h2::after {
-  content: "</h2>";
-  right: -4rem;
-  bottom: 0;
-}
-
-.blogPostContainer {
-  border: 1px solid var(--primary-color);
-}
-
-.blogPost {
-  display: block;
-  padding: 1rem 2rem;
-  font-size: large;
-  transition: all 100ms ease-in;
-}
-
-.blogPost:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-text-color);
-}
-
-.blogPost:not(:last-of-type) {
-  border-bottom: 1px solid var(--primary-color);
-}
-
-.blogPost span:first-of-type {
-  display: block
-}
-
 .title {
   font-size: 3rem;
   font-weight: lighter;
   margin-bottom: 0.6em;
+  text-align: center;
 }
 
 .title span {
@@ -67,11 +13,13 @@
 .subTitle {
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 1.2em;
+  margin-bottom: 2em;
+  text-align: center;
 }
 
 .buttons {
   display: flex;
+  justify-content: space-around;
   gap: 1.5em;
 }
 

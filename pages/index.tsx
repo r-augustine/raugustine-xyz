@@ -1,24 +1,16 @@
 import Head from "next/head";
 import Link from "next/link";
+import BlogSection from "../components/BlogSection";
 import Container from "../components/Container";
 import Section from "../components/Section";
-import { getSortedPostsData, Post } from "../lib/posts";
 import styles from "../styles/Home.module.css";
+import { getSortedPostsData, Post } from "../lib/posts";
 
-interface HomeProps {
-  posts: [Post];
+interface Props {
+  posts: Array<Post>;
 }
 
-export async function getStaticProps() {
-  const posts = getSortedPostsData();
-  return {
-    props: {
-      posts,
-    },
-  };
-}
-
-export default function Home({ posts }: HomeProps) {
+export default function Home({ posts }: Props) {
   return (
     <>
       <Head>
@@ -69,26 +61,17 @@ export default function Home({ posts }: HomeProps) {
             </div>
           </Container>
         </Section>
-        <Section id="blog">
-          <Container>
-            <div className={styles.blogHeader}>
-              <h2>My Blog</h2>
-            </div>
-            <div className={styles.blogPostContainer}>
-              {posts.map((post) => (
-                <Link
-                  href={`/blog/${post.id}`}
-                  key={post.id}
-                  className={styles.blogPost}
-                >
-                  <span>{post.title}</span>
-                  <span>{post.date}</span>
-                </Link>
-              ))}
-            </div>
-          </Container>
-        </Section>
+        <BlogSection posts={posts} />
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = getSortedPostsData();
+  return {
+    props: {
+      posts,
+    },
+  };
 }

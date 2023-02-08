@@ -28,6 +28,10 @@ export default function App({ Component, pageProps }: AppProps) {
             font-family: ${source_code_pro.style.fontFamily};
             scroll-behavior: smooth;
           }
+
+          // * {
+          //   outline: 1px solid red;
+          // }
         `}
       </style>
       <Component {...pageProps} />
