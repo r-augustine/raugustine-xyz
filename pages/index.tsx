@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Link from "next/link";
+import Container from "../components/Container";
+import Section from "../components/Section";
 import { getSortedPostsData, Post } from "../lib/posts";
 import styles from "../styles/Home.module.css";
 
@@ -27,8 +30,8 @@ export default function Home({ posts }: HomeProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <section className={styles.container}>
-          <div className={styles.content}>
+        <Section>
+          <Container>
             <h1 className={styles.title}>
               Hi I&rsquo;m <span>Ricardo</span>, a FullStack Developer
             </h1>
@@ -60,9 +63,31 @@ export default function Home({ posts }: HomeProps) {
               >
                 LinkedIn
               </a>
+              <a href="#blog" className={styles.button}>
+                Blog
+              </a>
             </div>
-          </div>
-        </section>
+          </Container>
+        </Section>
+        <Section id="blog">
+          <Container>
+            <div className={styles.blogHeader}>
+              <h2>My Blog</h2>
+            </div>
+            <div className={styles.blogPostContainer}>
+              {posts.map((post) => (
+                <Link
+                  href={`/blog/${post.id}`}
+                  key={post.id}
+                  className={styles.blogPost}
+                >
+                  <span>{post.title}</span>
+                  <span>{post.date}</span>
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </Section>
       </main>
     </>
   );
