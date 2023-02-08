@@ -16,7 +16,7 @@ const BlogSection = ({ posts }: Props) => {
         </div>
         <div className={styles.posts}>
           {posts.map((post) => (
-            <BlogItem post={post} />
+            <BlogItem key={post.id} post={post} />
           ))}
         </div>
       </Container>
