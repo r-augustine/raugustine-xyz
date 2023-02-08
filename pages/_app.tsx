@@ -8,7 +8,7 @@ const source_code_pro = Source_Code_Pro({ subsets: ["latin"] });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      {/* <Script
+      <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-0JGEJB0S51"
         strategy="afterInteractive"
       />
@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
         
           gtag('config', 'G-0JGEJB0S51');
         `}
-      </Script> */}
+      </Script>
 
       <style jsx global>
         {`
@@ -28,10 +28,6 @@ export default function App({ Component, pageProps }: AppProps) {
             font-family: ${source_code_pro.style.fontFamily};
             scroll-behavior: smooth;
           }
-
-          // * {
-          //   outline: 1px solid red;
-          // }
         `}
       </style>
       <Component {...pageProps} />
